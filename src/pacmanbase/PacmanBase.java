@@ -35,14 +35,14 @@ public class PacmanBase extends base.Jogo {
     private int totalColunas;
 
     /*
-    pac_pix_x -> posicao do pacman no eixo x em pixels.
-    pac_pix_y -> posicao do pacman no eixo y em pixels.
-    pac_map_x -> posicao do pacman no eixo x com base no mapa de caracteres.
-    pac_map_y -> posicao do pacman no eixo y com base no mapa de caracteres.
-    */
+     pac_pix_x -> posicao do pacman no eixo x em pixels.
+     pac_pix_y -> posicao do pacman no eixo y em pixels.
+     pac_map_x -> posicao do pacman no eixo x com base no mapa de caracteres.
+     pac_map_y -> posicao do pacman no eixo y com base no mapa de caracteres.
+     */
     private int pac_pix_x, pac_pix_y, pac_map_x, pac_map_y;
     private int direcao, quadro, contador_de_atualizacoes;
-    
+
     public PacmanBase() {
         this.titulo = "Pacman Base";
         contador_de_atualizacoes = 0;
@@ -61,11 +61,11 @@ public class PacmanBase extends base.Jogo {
         }
 
         try {
-            pilula = ImageIO.read(new File("resources/imagens/coin.png"));
+            pilula = ImageIO.read(new File("resources/imagens/coin.jpg"));
         } catch (IOException ex) {
             System.err.println("Imagem pilula falhou: " + ex);
         }
-        
+
         //Leitura do mapa.
         Scanner s;
         try {
@@ -78,7 +78,7 @@ public class PacmanBase extends base.Jogo {
 
             totalLinhas = mapa.size();
             totalColunas = mapa.get(0).length();
-            
+
             System.out.println("Resolução da tela:");
             System.out.println(TAM * totalLinhas + " x " + TAM * totalColunas);
 
@@ -119,17 +119,32 @@ public class PacmanBase extends base.Jogo {
     public void desenha(Graphics2D g) {
         //Tem que desenhar os blocos e as pilulas aqui.
         //Se o pacman já passou na posicao da pilua, nao desenha.
-        
+
         g.drawImage(pacman.getSubimage(quadro * 30, (direcao - 37) * 30, TAM, TAM),
                 pac_pix_x, pac_pix_y, null);
- 
+
+        //Para desenhar uma imagem adaptando-a ao tamanho TAMxTAM (redimencionando):
+        /*
+         g.drawImage(imagem, posicao_inicial_do_desenho_x, 
+                    posicao_inicial_do_desenho_y, 
+                    posicao_inicial_do_desenho_x + TAM, 
+                    posicao_inicial_do_desenho_y + TAM,
+                    posicao_inicial_do_recorte_x, 
+                    posicao_inicial_do_recorte_y, 
+                    posicao_final_do_recorte_x, 
+                    posicao_final_do_recorte_y, null);
+        
+        EXEMPLO:
+        g.drawImage(bloco, x, y, x + TAM, y + TAM,
+                0, 0, bloco.getWidth(), bloco.getHeight(), null);
+         */
     }
 
     @Override
     public void atualiza() {
         quadro++;
         contador_de_atualizacoes++;
-        
+
         if (quadro == 3) {
             quadro = 0;
         }
