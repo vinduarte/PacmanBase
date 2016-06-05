@@ -14,6 +14,7 @@ problema de biblioteca, caso ocorra, resolva da mesma forma.
 Detalhes importantes:
 - Dentro do projeto há uma pasta chamada "resources", dentro desta estão duas pastas, "mapas" e "imagens". Dentro destas
 estão as imagens básicas e os mapas básicos.
+- Um bom site de imagens para jogos simples é esse: http://opengameart.org
 
 A fazeres:
 - Exibir o bloco que foi carregado. Nos mapas que estão incluídos neste projeto a posição para o bloco é indicada com 1.
