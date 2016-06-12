@@ -1,3 +1,20 @@
+FASE 2 do projeto:
+Pontos dessa etapa: 6
+Pontos extras: 2
+
+A fazeres:
+- Carregar o fantasma (ou o "vilão" que você quiser) na tela. (1 ponto)
+- Movimentação randômica do fantasma. Fazer o fantasma se mover na tela de maneira aleatória. O fantasma não deve ficar indo pra frente e voltando o tempo todo para a mesma posição, não deve passar onde já passou, a não ser que já não tenha mais onde passar. (5 pontos)
+
+Extra:
+- Terminar o jogo quando o pacman encostar no fantasma, lembrando que o pacman não pode passar pra "dentro" do fantasma, tem que "morrer" quando encostar o primeiro pixel. (2 pontos).
+
+Algoritmo básico:
+(abaixo descrevo UMA das possibilidades de solução, há outras, se você pensar uma mais fácil, excelente)
+Escolhe uma direção inicial para o pacman.
+A cada atualização anda, marca que já passou na posição, e procura se há mais de uma direção que o pacman pode ir (a direção atual e alguma outra). Se houver, sorteia uma posição para ele ir. Caso não haja posição para ir, atualiza a matriz que armazena onde o pacman já foi, informando que ele agora não passou em lugar nenhum, e procura uma nova posição para ir.
+
+FASE 1 do projeto:
 Base para o jogo Pacman.
 
 Pontos dessa etapa: 5 pontos.
