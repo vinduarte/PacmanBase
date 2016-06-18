@@ -1,11 +1,17 @@
 FASE 3 do projeto:
 Ponto dessa etapa: 11.
 Data máxima para entrega, via e-mail: 03/07/2016.
+
 Divididos em:
+
 1) Colocar 3 fantasmas no mapa. Valor: 2 pontos. Todos os fantasmas podem ser do mesmo tipo do primeiro, ou seja, fantasmas que movem-se aleatoriamente pelo mapa.
+
 2) Pílulas especiais no mapa. Valor: 2 pontos. O mapa deve conter, além das pílulas normais que o pacman come, pílulas "diferenciadas" que têm outra forma. Para isso você deve alterar seus arquivos de mapa para que contenham um caracter que especifique as posições dessas pílulas especiais. Para o maior mapa que nós temos, acho recomendável haver no máxmo 3 pílulas dessa especial, porque se houver mais os fantasmas ficarão lentos o tempo todo (mais informações sobre isso a seguir).
+
 3) Fantasmas lentos depois de o pacman comer uma pílula. Valor: 2 pontos. Quando o Pacman comer uma pílula especial os fantasmas ficam lentos por um período de tempo, digamos, 3 segundos (este valor deve ser escolhido pelo programador).
+
 4) Fazer mapas maiores (pelo menos 1). Valor: 2 pontos. Para que o jogo fique com mais jogabilidade nessa etapa, é importante haver mapas maiores.
+
 5) Jogabilidade: 3 pontos. Será avaliado se o seu jogo está bom para ser jogado ou está travando, com bugs etc.
 
 Quaisquer dúvidas, enviem e-mail para vin.duartelopes@gmail.com.
